@@ -3,27 +3,33 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		4E3CE16A24F405A900B8F7AA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3CE16924F405A900B8F7AA /* AppDelegate.swift */; };
-		4E3CE16C24F405A900B8F7AA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3CE16B24F405A900B8F7AA /* SceneDelegate.swift */; };
 		4E3CE16E24F405A900B8F7AA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3CE16D24F405A900B8F7AA /* ViewController.swift */; };
-		4E3CE17124F405A900B8F7AA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E3CE16F24F405A900B8F7AA /* Main.storyboard */; };
 		4E3CE17324F405AB00B8F7AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E3CE17224F405AB00B8F7AA /* Assets.xcassets */; };
 		4E3CE17624F405AB00B8F7AA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E3CE17424F405AB00B8F7AA /* LaunchScreen.storyboard */; };
+		4E3CE17E24F405FF00B8F7AA /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3CE17D24F405FF00B8F7AA /* MapViewController.swift */; };
+		4E3CE18124F4073300B8F7AA /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3CE18024F4073300B8F7AA /* LocationManager.swift */; };
+		4E83D6D924F4099400631129 /* LineOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E83D6D824F4099400631129 /* LineOverlay.swift */; };
+		7477D8F387AFD1058DA340E7 /* Pods_PersonalFlightTracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24D8EF269D97A3F777B68D82 /* Pods_PersonalFlightTracker.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0C52CC1FBD525DB6F90A5ABE /* Pods-PersonalFlightTracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PersonalFlightTracker.debug.xcconfig"; path = "Target Support Files/Pods-PersonalFlightTracker/Pods-PersonalFlightTracker.debug.xcconfig"; sourceTree = "<group>"; };
+		24D8EF269D97A3F777B68D82 /* Pods_PersonalFlightTracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PersonalFlightTracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E3CE16624F405A900B8F7AA /* PersonalFlightTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PersonalFlightTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E3CE16924F405A900B8F7AA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4E3CE16B24F405A900B8F7AA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		4E3CE16D24F405A900B8F7AA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		4E3CE17024F405A900B8F7AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4E3CE17224F405AB00B8F7AA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4E3CE17524F405AB00B8F7AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4E3CE17724F405AB00B8F7AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4E3CE17D24F405FF00B8F7AA /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		4E3CE18024F4073300B8F7AA /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		4E83D6D824F4099400631129 /* LineOverlay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineOverlay.swift; sourceTree = "<group>"; };
+		97213E6C53282A25D76F205E /* Pods-PersonalFlightTracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PersonalFlightTracker.release.xcconfig"; path = "Target Support Files/Pods-PersonalFlightTracker/Pods-PersonalFlightTracker.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7477D8F387AFD1058DA340E7 /* Pods_PersonalFlightTracker.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +49,8 @@
 			children = (
 				4E3CE16824F405A900B8F7AA /* PersonalFlightTracker */,
 				4E3CE16724F405A900B8F7AA /* Products */,
+				E3A58ED7BBB4B6793E0ECAC0 /* Pods */,
+				ADD9F3B1770CFE1D3D4812CD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +65,41 @@
 		4E3CE16824F405A900B8F7AA /* PersonalFlightTracker */ = {
 			isa = PBXGroup;
 			children = (
+				4E3CE17F24F4072900B8F7AA /* Map */,
 				4E3CE16924F405A900B8F7AA /* AppDelegate.swift */,
-				4E3CE16B24F405A900B8F7AA /* SceneDelegate.swift */,
 				4E3CE16D24F405A900B8F7AA /* ViewController.swift */,
-				4E3CE16F24F405A900B8F7AA /* Main.storyboard */,
 				4E3CE17224F405AB00B8F7AA /* Assets.xcassets */,
 				4E3CE17424F405AB00B8F7AA /* LaunchScreen.storyboard */,
 				4E3CE17724F405AB00B8F7AA /* Info.plist */,
 			);
 			path = PersonalFlightTracker;
+			sourceTree = "<group>";
+		};
+		4E3CE17F24F4072900B8F7AA /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				4E83D6D824F4099400631129 /* LineOverlay.swift */,
+				4E3CE17D24F405FF00B8F7AA /* MapViewController.swift */,
+				4E3CE18024F4073300B8F7AA /* LocationManager.swift */,
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
+		ADD9F3B1770CFE1D3D4812CD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				24D8EF269D97A3F777B68D82 /* Pods_PersonalFlightTracker.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E3A58ED7BBB4B6793E0ECAC0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0C52CC1FBD525DB6F90A5ABE /* Pods-PersonalFlightTracker.debug.xcconfig */,
+				97213E6C53282A25D76F205E /* Pods-PersonalFlightTracker.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +109,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4E3CE17A24F405AB00B8F7AA /* Build configuration list for PBXNativeTarget "PersonalFlightTracker" */;
 			buildPhases = (
+				A1932B2B4EC7CA81B760BB15 /* [CP] Check Pods Manifest.lock */,
 				4E3CE16224F405A900B8F7AA /* Sources */,
 				4E3CE16324F405A900B8F7AA /* Frameworks */,
 				4E3CE16424F405A900B8F7AA /* Resources */,
+				83FDC6C57788ADA146176AC6 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -127,34 +164,69 @@
 			files = (
 				4E3CE17624F405AB00B8F7AA /* LaunchScreen.storyboard in Resources */,
 				4E3CE17324F405AB00B8F7AA /* Assets.xcassets in Resources */,
-				4E3CE17124F405A900B8F7AA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		83FDC6C57788ADA146176AC6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PersonalFlightTracker/Pods-PersonalFlightTracker-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PersonalFlightTracker/Pods-PersonalFlightTracker-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PersonalFlightTracker/Pods-PersonalFlightTracker-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A1932B2B4EC7CA81B760BB15 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PersonalFlightTracker-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		4E3CE16224F405A900B8F7AA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E3CE18124F4073300B8F7AA /* LocationManager.swift in Sources */,
 				4E3CE16E24F405A900B8F7AA /* ViewController.swift in Sources */,
+				4E83D6D924F4099400631129 /* LineOverlay.swift in Sources */,
+				4E3CE17E24F405FF00B8F7AA /* MapViewController.swift in Sources */,
 				4E3CE16A24F405A900B8F7AA /* AppDelegate.swift in Sources */,
-				4E3CE16C24F405A900B8F7AA /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		4E3CE16F24F405A900B8F7AA /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				4E3CE17024F405A900B8F7AA /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		4E3CE17424F405AB00B8F7AA /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -282,6 +354,7 @@
 		};
 		4E3CE17B24F405AB00B8F7AA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0C52CC1FBD525DB6F90A5ABE /* Pods-PersonalFlightTracker.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -291,7 +364,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = JCS.PersonalFlightTracker;
+				PRODUCT_BUNDLE_IDENTIFIER = com.joancardona.flightTracker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -300,6 +373,7 @@
 		};
 		4E3CE17C24F405AB00B8F7AA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 97213E6C53282A25D76F205E /* Pods-PersonalFlightTracker.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -309,7 +383,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = JCS.PersonalFlightTracker;
+				PRODUCT_BUNDLE_IDENTIFIER = com.joancardona.flightTracker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
