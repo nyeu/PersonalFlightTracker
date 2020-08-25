@@ -1,8 +1,8 @@
 //
-//  MapViewController.swift
+//  ReplayMapViewController.swift
 //  PersonalFlightTracker
 //
-//  Created by Joan on 24/08/2020.
+//  Created by Joan on 25/08/2020.
 //  Copyright © 2020 Joan Cardona. All rights reserved.
 //
 
@@ -12,12 +12,12 @@ import MapKit
 import SnapKit
 import CoreLocation
 
-class MapViewController: UIViewController {
+class ReplayMapViewController: UIViewController {
     let mapView: MKMapView
-    let locationManager: LocationManager
+    let route: Route
     let playButton: UIButton = {
         let b = UIButton()
-        b.setTitle("Start Recording", for: .normal)
+        b.setTitle("Start Playing", for: .normal)
         b.setTitleColor(.systemBlue, for: .normal)
         b.backgroundColor = .white
         b.layer.cornerRadius = 6.0
@@ -33,10 +33,13 @@ class MapViewController: UIViewController {
         return l
     }()
 
-    init() {
+    var timer: Timer?
+    var index: Int = 0
+
+    init(route: Route) {
+        self.route = route
         mapView = MKMapView(frame: .zero)
-        
-        locationManager = LocationManager()
+
         super.init(nibName: nil, bundle: nil)
         view.addSubview(mapView)
 
@@ -67,42 +70,41 @@ class MapViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .green
-        mapView.showsUserLocation = true
+        mapView.showsUserLocation = false
         mapView.delegate = self
-        locationManager.delegate = self
         playButton.addTarget(self, action: #selector(startPlaying), for: .touchUpInside)
     }
 
     @objc func startPlaying() {
-        switch locationManager.state {
-        case .record:
-            locationManager.state = .stop
-            let route = Route(waypoints: locationManager.waypoints)
-            DataModel.shared.saveRoute(route)
+        guard index < self.route.waypoints.count else {
             dismiss(animated: true, completion: nil)
-        case .stop:
-            locationManager.state = .record
-            playButton.setTitle("Stop Recording", for: .normal)
+            return
         }
+        timer = Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(self.updateWaypoint), userInfo: nil, repeats: true)
+        playButton.isHidden = true
+    }
+
+    @objc func updateWaypoint() {
+        guard index < self.route.waypoints.count else {
+            playButton.isHidden = false
+            playButton.setTitle("Close", for: .normal)
+            return
+        }
+        self.newWayPoint(wayPoint: self.route.waypoints[index])
+        index += 1
     }
 }
 
-extension MapViewController: LocationManagerDelegate {
-    func locationUpdated(locations: [CLLocation], altitudes: [Altitude]) {
-        if let lastLocation = locations.last, let coordinate = locations.last?.coordinate {
-            mapView.setCenter(coordinate, animated: true)
-//            mapView.setRegion(MKCoordinateRegion(center: coordinate, span: MKCoordinateSpan.init(latitudeDelta: 2, longitudeDelta: 2)), animated: true)
-//            altitudeLabel.text = "Altitude: \(String(format: "%.2f", lastLocation.altitude.inFeet()))"
-        }
-        if let lastAltitude = altitudes.last {
-            altitudeLabel.text = "Altitude: \(String(format: "%.2f", lastAltitude.relativeAltitude.inFeet()))\nPressure: \(String(format: "%.2f hPA", (lastAltitude.pressure)))"
-        }
-        addOverlays(coordinates: locations.map({$0.coordinate}))
+extension ReplayMapViewController {
+    func newWayPoint(wayPoint: Waypoint) {
+        let coordinate = CLLocationCoordinate2D(latitude: wayPoint.coordinate.latitude, longitude: wayPoint.coordinate.longitude)
+        altitudeLabel.text = "Altitude: \(String(format: "%.2f", wayPoint.altitude.inFeet()))"
+        mapView.setCenter(coordinate, animated: true)
+        addOverlays(coordinates: [coordinate])
     }
 }
 
-extension MapViewController: MKMapViewDelegate {
+extension ReplayMapViewController: MKMapViewDelegate {
     func mapView(_ mapView: MKMapView, didAdd renderers: [MKOverlayRenderer]) {
 
     }
@@ -116,7 +118,6 @@ extension MapViewController: MKMapViewDelegate {
 
     fileprivate func addOverlays(coordinates: [CLLocationCoordinate2D]) {
         let p = MKPolygon(coordinates: coordinates, count: coordinates.count)
-            mapView.addOverlay(p)
-        }
-
+        mapView.addOverlay(p)
+    }
 }

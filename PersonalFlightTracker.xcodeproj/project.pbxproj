@@ -14,6 +14,11 @@
 		4E3CE17E24F405FF00B8F7AA /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3CE17D24F405FF00B8F7AA /* MapViewController.swift */; };
 		4E3CE18124F4073300B8F7AA /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3CE18024F4073300B8F7AA /* LocationManager.swift */; };
 		4E83D6D924F4099400631129 /* LineOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E83D6D824F4099400631129 /* LineOverlay.swift */; };
+		4E83D6DC24F4F4D300631129 /* Waypoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E83D6DB24F4F4D300631129 /* Waypoint.swift */; };
+		4E83D6DE24F54F2800631129 /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E83D6DD24F54F2800631129 /* Route.swift */; };
+		4E83D6E024F54FA700631129 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E83D6DF24F54FA700631129 /* DataModel.swift */; };
+		4E83D6E324F5507400631129 /* RoutesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E83D6E224F5507400631129 /* RoutesViewController.swift */; };
+		4E83D6E524F55B4D00631129 /* ReplayMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E83D6E424F55B4D00631129 /* ReplayMapViewController.swift */; };
 		7477D8F387AFD1058DA340E7 /* Pods_PersonalFlightTracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24D8EF269D97A3F777B68D82 /* Pods_PersonalFlightTracker.framework */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +34,11 @@
 		4E3CE17D24F405FF00B8F7AA /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		4E3CE18024F4073300B8F7AA /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		4E83D6D824F4099400631129 /* LineOverlay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineOverlay.swift; sourceTree = "<group>"; };
+		4E83D6DB24F4F4D300631129 /* Waypoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Waypoint.swift; sourceTree = "<group>"; };
+		4E83D6DD24F54F2800631129 /* Route.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
+		4E83D6DF24F54FA700631129 /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
+		4E83D6E224F5507400631129 /* RoutesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutesViewController.swift; sourceTree = "<group>"; };
+		4E83D6E424F55B4D00631129 /* ReplayMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReplayMapViewController.swift; sourceTree = "<group>"; };
 		97213E6C53282A25D76F205E /* Pods-PersonalFlightTracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PersonalFlightTracker.release.xcconfig"; path = "Target Support Files/Pods-PersonalFlightTracker/Pods-PersonalFlightTracker.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -65,12 +75,16 @@
 		4E3CE16824F405A900B8F7AA /* PersonalFlightTracker */ = {
 			isa = PBXGroup;
 			children = (
+				4E83D6E624F55B5300631129 /* Replay */,
+				4E83D6E124F5506A00631129 /* Routes */,
+				4E83D6DA24F4F4C800631129 /* Modal */,
 				4E3CE17F24F4072900B8F7AA /* Map */,
 				4E3CE16924F405A900B8F7AA /* AppDelegate.swift */,
 				4E3CE16D24F405A900B8F7AA /* ViewController.swift */,
 				4E3CE17224F405AB00B8F7AA /* Assets.xcassets */,
 				4E3CE17424F405AB00B8F7AA /* LaunchScreen.storyboard */,
 				4E3CE17724F405AB00B8F7AA /* Info.plist */,
+				4E83D6DF24F54FA700631129 /* DataModel.swift */,
 			);
 			path = PersonalFlightTracker;
 			sourceTree = "<group>";
@@ -83,6 +97,31 @@
 				4E3CE18024F4073300B8F7AA /* LocationManager.swift */,
 			);
 			path = Map;
+			sourceTree = "<group>";
+		};
+		4E83D6DA24F4F4C800631129 /* Modal */ = {
+			isa = PBXGroup;
+			children = (
+				4E83D6DB24F4F4D300631129 /* Waypoint.swift */,
+				4E83D6DD24F54F2800631129 /* Route.swift */,
+			);
+			path = Modal;
+			sourceTree = "<group>";
+		};
+		4E83D6E124F5506A00631129 /* Routes */ = {
+			isa = PBXGroup;
+			children = (
+				4E83D6E224F5507400631129 /* RoutesViewController.swift */,
+			);
+			path = Routes;
+			sourceTree = "<group>";
+		};
+		4E83D6E624F55B5300631129 /* Replay */ = {
+			isa = PBXGroup;
+			children = (
+				4E83D6E424F55B4D00631129 /* ReplayMapViewController.swift */,
+			);
+			path = Replay;
 			sourceTree = "<group>";
 		};
 		ADD9F3B1770CFE1D3D4812CD /* Frameworks */ = {
@@ -217,9 +256,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				4E3CE18124F4073300B8F7AA /* LocationManager.swift in Sources */,
+				4E83D6E324F5507400631129 /* RoutesViewController.swift in Sources */,
 				4E3CE16E24F405A900B8F7AA /* ViewController.swift in Sources */,
+				4E83D6DC24F4F4D300631129 /* Waypoint.swift in Sources */,
+				4E83D6E524F55B4D00631129 /* ReplayMapViewController.swift in Sources */,
 				4E83D6D924F4099400631129 /* LineOverlay.swift in Sources */,
 				4E3CE17E24F405FF00B8F7AA /* MapViewController.swift in Sources */,
+				4E83D6E024F54FA700631129 /* DataModel.swift in Sources */,
+				4E83D6DE24F54F2800631129 /* Route.swift in Sources */,
 				4E3CE16A24F405A900B8F7AA /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -358,8 +402,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 26GTMYT47V;
 				INFOPLIST_FILE = PersonalFlightTracker/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -377,8 +423,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 26GTMYT47V;
 				INFOPLIST_FILE = PersonalFlightTracker/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
